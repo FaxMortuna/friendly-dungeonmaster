@@ -39,7 +39,7 @@ body {
 
 .sidebar h2 {
     text-align: center;
-    color: #black;
+    color: white;
 }
 
 .content {
@@ -63,3 +63,24 @@ button {
     margin: 20px auto; /* Zentriert den Button horizontal */
     text-align: center;
 }
+.dice-button {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border: 3px solid #222;
+    border-radius: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #222;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.dice-button:hover {
+    background: #f5e6c8;
+    box-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+}
+
