@@ -1,0 +1,19 @@
+#randomValue {
+    border: 1px solid black;
+    padding: 5px;
+    min-height: 2em;
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h1 { /*weil h1 nur ein Tag ist und keine ID wird das # weggelassen*/
+    color: blue;
+    text-align: center;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
