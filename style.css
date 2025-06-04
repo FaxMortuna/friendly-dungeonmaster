@@ -80,7 +80,7 @@ button {
     color: #222;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     display: block;
-    margin: 20px auto;
+    margin: 10px;
     cursor: pointer;
     transition: background 0.2s, box-shadow 0.2s;
 }
