@@ -85,6 +85,22 @@ button {
     transition: background 0.2s, box-shadow 0.2s;
 }
 
+.clear-history {
+    width: 100px;
+    height: 100px;
+    background: #ffcccc;
+    border: 3px solid #ff0000;
+    border-radius: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff0000;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    display: block;
+    margin: 10px auto; /* Zentriert den Button horizontal */
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
 .dice-button:hover {
     background: #f5e6c8;
     box-shadow: 4px 4px 16px rgba(0,0,0,0.3);
