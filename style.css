@@ -96,7 +96,7 @@ body {
 
 .dice-button:hover img,
 .dice-button:hover {
-    filter: brightness(1.2) drop-shadow(0 0 8px #ffffff);
+    filter: brightness(1.2) drop-shadow(0 0 8px #eee);
     transform: scale(1.08);
 }
 
@@ -155,7 +155,7 @@ body {
 }
 
 .clear-history:hover {
-    background: #f1dbaa;
+    background: #eee;
     color: #333;
     transform: scale(1.05);
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
