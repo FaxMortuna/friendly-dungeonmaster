@@ -60,3 +60,8 @@ function showRandomD100(btn) {
     const result = Math.floor(Math.random() * 100 + 1);
     updateDiceHistory(result);
 }
+
+function clearHistory() {
+    diceHistory.length = 0; // Clear the history array
+    updateDiceHistory(''); // Update the display to show empty history
+}
