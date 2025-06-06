@@ -19,13 +19,24 @@
         </ul>
     </nav>
     <div class="content">
-        <h1>Random Names</h1>
-        <p>This page is for you.</p>
+        <h1>Random Names (Male)</h1>
+        <p>Here you can generate a random male name.</p>
 
     </div>
-    <div class="content">
-        <button class="button-main" onclick="generateRandomName()">Generate Name</button>
-        <p id="randomName"></p>
+
     <script src="script.js"></script>
+
+    <!-- code für die Namensgenerierung und das Formular-->
+    <div class="content">
+        <button class="button-main" onclick="fetchRandomName()">Generate Random Name</button>
+        <div id="randomNameResult" style="margin-top:20px; font-size:1.3em; text-align:center;"></div>
+    </div>
+    <script>
+    function fetchRandomName() {
+      fetch('/api/randomname')
+        .then(r => r.json())
+        .then(d => document.getElementById('randomNameResult').textContent = d.name);
+    }
+    </script>
 </body>
 </html>
