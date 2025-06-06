@@ -2,7 +2,7 @@ const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
 const app = express();
-const db = new sqlite3.Database('namen.db');
+const db = new sqlite3.Database('namenmale.db');
 
 app.use(bodyParser.json());
 app.use(express.static('.')); // Statische Dateien (HTML, CSS, JS)

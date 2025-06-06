@@ -5,32 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friendly Dungeonmaster</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <nav class="navbar"> <!-- Sidebar with navigation links -->
-        
+    <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="randomdice.html">Random Dice</a></li>
+            <li class="dropdown">
+                <span class="dropbtn">Random Names</span>
+                <div class="dropdown-content">
+                    <a href="randomname.html">Male</a>
+                    <a href="randomname_female.html">Female</a>
+                </div>
+            </li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="randomname.html">Random Names</a></li>
+
         </ul>
     </nav>
-    <div class="content">
-        <h1>Random Names (Male)</h1>
-        <p>Here you can generate a random male name.</p>
-
-    </div>
 
     <script src="script.js"></script>
 
-    <!-- code für die Namensgenerierung und das Formular-->
-    <div class="content">
-        <button class="button-main" onclick="fetchRandomName()">Generate Random Name</button>
-        <div id="randomNameResult" style="margin-top:20px; font-size:1.3em; text-align:center;"></div>
-    </div>
+    <!-- code für die Namensgenerierung and das Formular-->
     <script>
     function fetchRandomName() {
       fetch('/api/randomname')
@@ -38,5 +36,10 @@
         .then(d => document.getElementById('randomNameResult').textContent = d.name);
     }
     </script>
+    <div class="content">
+        <div id="randomNameResult"></div>
+        <button class="button-main namegen" onclick="fetchRandomName()">Generate Random Name</button>
+    </div>
+
 </body>
 </html>
