@@ -18,14 +18,14 @@ app.get('/api/randomname', (req, res) => {
   db.get("SELECT name FROM firstNames ORDER BY RANDOM() LIMIT 1", [], (err, first) => {
     db.get("SELECT name FROM lastNames ORDER BY RANDOM() LIMIT 1", [], (err, last) => {
       db.get("SELECT name FROM flavors ORDER BY RANDOM() LIMIT 1", [], (err, flavor) => {
-        res.json({ name: `${first?.name || ''} ${last?.name || ''}, ${flavor?.name || ''}` });
+        res.json({ name: `${first?.name || ''} ${last?.name || ''} ${flavor?.name || ''}` });
       });
     });
   });
 });
 
 // Namen hinzufügen (nur mit Passwort)
-const ADMIN_PASSWORD = 'oO69mf911812!'; // <-- Ändere das!
+const ADMIN_PASSWORD = '123456789'; // <-- Ändere das!
 app.post('/api/addname', (req, res) => {
   if (req.body.password !== ADMIN_PASSWORD) return res.status(403).send('Forbidden');
   if (req.body.first) db.run("INSERT INTO firstNames (name) VALUES (?)", [req.body.first]);
