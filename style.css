@@ -253,3 +253,19 @@ body {
     align-items: center;
 }
 
+#randomLootResult {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2em;
+    color: #4b2e05;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: color 0.3s;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    min-height: 2.5em; /* etwas mehr Platz für große Namen */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

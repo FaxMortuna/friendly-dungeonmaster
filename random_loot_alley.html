@@ -15,15 +15,16 @@
 
     <!-- code für die Namensgenerierung and das Formular-->
     <script>
-    function fetchRandomName() {
-      fetch('/api/randomname')
-        .then(r => r.json())
-        .then(d => document.getElementById('randomNameResult').textContent = d.name);
-    }
+function fetchRandomLoot() {
+  fetch('/api/randomloot')
+    .then(r => r.json())
+    .then(d => document.getElementById('randomLootResult').textContent = d.item);
+}
+    window.addEventListener('DOMContentLoaded', fetchRandomLoot);
     </script>
     <div class="content">
-        <div id="randomNameResult"></div>
-        <button class="button-main namegen" onclick="fetchRandomName()">Generate Random Name</button>
+        <div id="randomLootResult"></div>
+        <button class="button-main namegen" onclick="fetchRandomLoot()">Generate Random Loot</button>
     </div>
 <script>
     fetch('navbar.html')

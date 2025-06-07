@@ -8,26 +8,17 @@
 
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="randomdice.html">Random Dice</a></li>
-            <li class="dropdown">
-                <span class="dropbtn">Random Names</span>
-                <div class="dropdown-content">
-                    <a href="randomname.html">Male</a>
-                    <a href="randomname_female.html">Female</a>
-                </div>
-            </li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div id="navbar-placeholder"></div>
     <div class="content">
         <h1>About</h1>
         <p>This page is for you.</p>
 
     </div>
     <script src="script.js"></script>
+    <script>
+    fetch('navbar.html')
+    .then(response => response.text())
+    .then(html => document.getElementById('navbar-placeholder').innerHTML = html);
+</script>
 </body>
 </html>

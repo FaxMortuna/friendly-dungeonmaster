@@ -16,16 +16,17 @@
     <!-- code für die Namensgenerierung and das Formular-->
     <script>
     function fetchRandomName() {
-      fetch('/api/randomname')
+      fetch('/api/randomname_female')
         .then(r => r.json())
         .then(d => document.getElementById('randomNameResult').textContent = d.name);
     }
+    window.addEventListener('DOMContentLoaded', fetchRandomName);
     </script>
     <div class="content">
         <div id="randomNameResult"></div>
         <button class="button-main namegen" onclick="fetchRandomName()">Generate Random Name</button>
     </div>
-<script>
+    <script>
     fetch('navbar.html')
     .then(response => response.text())
     .then(html => document.getElementById('navbar-placeholder').innerHTML = html);

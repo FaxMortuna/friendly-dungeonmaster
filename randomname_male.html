@@ -20,6 +20,8 @@
         .then(r => r.json())
         .then(d => document.getElementById('randomNameResult').textContent = d.name);
     }
+    window.addEventListener('DOMContentLoaded', fetchRandomName);
+    </script>
     </script>
     <div class="content">
         <div id="randomNameResult"></div>

@@ -2,7 +2,7 @@ const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
 const app = express();
-const db = new sqlite3.Database('namenmale.db');
+const db = new sqlite3.Database('db/namenmale.db');
 
 app.use(bodyParser.json());
 app.use(express.static('.')); // Statische Dateien (HTML, CSS, JS)
@@ -24,14 +24,46 @@ app.get('/api/randomname', (req, res) => {
   });
 });
 
-// Namen hinzufügen (nur mit Passwort)
-const ADMIN_PASSWORD = '123456789'; // <-- Ändere das!
-app.post('/api/addname', (req, res) => {
-  if (req.body.password !== ADMIN_PASSWORD) return res.status(403).send('Forbidden');
-  if (req.body.first) db.run("INSERT INTO firstNames (name) VALUES (?)", [req.body.first]);
-  if (req.body.last) db.run("INSERT INTO lastNames (name) VALUES (?)", [req.body.last]);
-  if (req.body.flavor) db.run("INSERT INTO flavors (name) VALUES (?)", [req.body.flavor]);
-  res.send('OK');
+// Neue Datenbank für weibliche Namen
+const dbFemale = new sqlite3.Database('db/namenfemale.db');
+
+dbFemale.serialize(() => {
+  dbFemale.run("CREATE TABLE IF NOT EXISTS firstNames (name TEXT)");
+  dbFemale.run("CREATE TABLE IF NOT EXISTS lastNames (name TEXT)");
+  dbFemale.run("CREATE TABLE IF NOT EXISTS flavors (name TEXT)");
+});
+
+// Neue Route für weibliche Namen
+app.get('/api/randomname_female', (req, res) => {
+  dbFemale.get("SELECT name FROM firstNames ORDER BY RANDOM() LIMIT 1", [], (err, first) => {
+    dbFemale.get("SELECT name FROM lastNames ORDER BY RANDOM() LIMIT 1", [], (err, last) => {
+      dbFemale.get("SELECT name FROM flavors ORDER BY RANDOM() LIMIT 1", [], (err, flavor) => {
+        res.json({ name: `${first?.name || ''} ${last?.name || ''} ${flavor?.name || ''}` });
+      });
+    });
+  });
+});
+
+// Neue Datenbank für Random Loot Alley
+const dbLoot = new sqlite3.Database('db/random_loot_alley.db');
+
+dbLoot.serialize(() => {
+  dbLoot.run(`CREATE TABLE IF NOT EXISTS 'random_loot_alley' ("loot_alley" TEXT)`);
+});
+
+// Route für zufälligen Loot-Eintrag
+app.get('/api/randomloot', (req, res) => {
+  dbLoot.get(
+    `SELECT "loot_alley" as item FROM random_loot_alley ORDER BY RANDOM() LIMIT 1`,
+    [],
+    (err, row) => {
+      if (err) {
+        res.status(500).json({ error: 'Fehler beim Auslesen der Loot-Tabelle.' });
+      } else {
+        res.json({ item: row?.item || '' });
+      }
+    }
+  );
 });
 
 app.listen(3000, () => console.log('Server läuft auf http://localhost:3000'));
