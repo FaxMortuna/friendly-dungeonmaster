@@ -1,271 +1,297 @@
 body {
-  background-color: #f5e6c8; /* Hintergrundfarbe */
-  background-size: cover; /* oder: contain / auto */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: sans-serif; /* optional für bessere Lesbarkeit */
-  color: #000000; /* Textfarbe */
+  background-color: #f9f6f1; /* sehr helles Beige */
+  font-family: 'Segoe UI', 'Caveat', cursive, sans-serif;
+  color: #2d1c0c; /* dunkles Braun für Text */
+  margin: 0; /* NEU: entfernt Standardabstand */
+  padding: 0; /* NEU */
 }
 
 .navbar {
-    background-color: #333;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  background-color: #4b2e05; /* dunkles Braun */
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;    /* NEU */
+  right: 0;   /* NEU */
+  width: 100%;
+  z-index: 1000;
 }
 .navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; 
-    width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .navbar li {
-    margin: 0 15px;
+  margin: 0 0; /* NEU: entfernt Seitenabstand */
+  position: relative; /* Für Dropdown-Positionierung */
 }
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 24px; /* gleiche Höhe wie .navbar (10px oben/unten) */
-    display: block;
-    height: 100%;
-    line-height: 1.5;
+.navbar a, .dropbtn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 24px;
+  display: block;
+  height: 100%;
+  line-height: 1.5;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+  min-width: 140px; /* Optional: sorgt für gleichmäßige Breite */
+  text-align: center;
+  box-sizing: border-box;
 }
-.navbar a:hover {
-    background: #f5e6c8;
-    color: #333;
-    border-radius: 0; /* rechteckig */
-    transition: background 0.2s, color 0.2s;
+.navbar a:hover, .dropdown:hover > .dropbtn, .dropdown:focus-within > .dropbtn {
+  background: #e6d3b3; /* helles Beige */
+  color: #4b2e05;
+  border-radius: 0;
+  transition: background 0.2s, color 0.2s;
 }
-
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;      /* vertikal mittig */
-    min-height: 80vh;            /* fast ganze Seite, passe ggf. an */
-    padding-top: 80px;           /* Platz für Navbar */
-    padding-bottom: 20px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  width: 100%;
 }
-
-.content h1 {
-    text-align: center;
+.content.dice {
+  min-height: unset;
+  justify-content: flex-start;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
-
+.content h1, .content h2, .content p {
+  text-align: center;
+}
 .content h2 {
-    text-align: center;
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
+  color: #4b2e05;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
-
 .content p {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
 }
-
 
 .parent {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Abstand zwischen den Elementen */
-}   
-.dice-button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-    color: inherit;
-    cursor: pointer;
-    outline: none;
-    /* Entfernt alle Standard-Button-Stile */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
-
+.dice-button,
 .dice-button img {
-    display: block;
-    width: 60px;
-    height: 60px;
-    transition: filter 0.2s, transform 0.2s;
+  transition: filter 0.2s, transform 0.2s;
 }
-
+.dice-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+.dice-button img {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
 .dice-button:hover img,
 .dice-button:hover {
-    filter: brightness(1.2) drop-shadow(0 0 8px #eee);
-    transform: scale(1.08);
+  filter: brightness(1.2) drop-shadow(0 0 8px #e6d3b3);
+  transform: scale(1.08);
 }
-
 .dice-button:active img,
 .dice-button:active {
-    transform: scale(0.96);
-    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  transform: scale(0.96);
+  box-shadow: 0 1px 4px rgba(120,90,40,0.10);
 }
 .dice-button:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
-/* ...dice history... */
 .dice-history {
-    display: grid;
-    grid-template-columns: repeat(5, 40px);
-    grid-template-rows: repeat(2, 40px);
-    gap: 32px;
-    justify-content: center;
-    align-items: center;
-    margin: 30px auto 0 auto;
-    width: max-content;
-    background: transparent;
-    border-radius: 8px;
-    padding: 10px;
-    min-height: 96px;
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+  grid-template-rows: repeat(2, 40px);
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  margin: 16px auto;
+  width: max-content;
+  background: transparent;
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 96px;
 }
 .dice-history-cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #eee;
-    border: 1px solid #bbb;
-    border-radius: 6px;
-    font-size: 2em;
-    min-width: 60px;
-    min-height: 60px;
-    font-weight: bold;
-    color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3e7d3;
+  border: 1px solid #bfa97a;
+  border-radius: 6px;
+  font-size: 2em;
+  min-width: 60px;
+  min-height: 60px;
+  font-weight: bold;
+  color: #4b2e05;
 }
-/* ...flash wenn eintrag erscheint im ergebnis der würfel... */
 @keyframes flash {
-    0%   { background: white; }
-    100% { background: #f5e6c8; }
+  0%   { background: #fffbe6; }
+  100% { background: #e6d3b3; }
 }
-
 .dice-history-cell.flash {
-    animation: flash 0.5s;
+  animation: flash 0.5s;
 }
 
 .button-main {
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 28px;
-    font-size: 1.1em;
-    font-family: inherit;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 20px auto 0 auto;
-    display: block;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: background 0.2s, color 0.2s, transform 0.2s;
+  background: #bfa97a;
+  color: #4b2e05;
+  border: 2px solid #a0895b;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px auto 0 auto;
+  display: block;
+  box-shadow: 0 2px 8px rgba(120,90,40,0.08);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
-
 .button-main:hover {
-    background: #eee;
-    color: #333;
-    transform: scale(1.05);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-
+  background: #e6d3b3;
+  color: #3a2a13;
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(120,90,40,0.15);
 }
-
 .button-main:active {
-    transform: scale(0.96);
-    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  transform: scale(0.96);
+  box-shadow: 0 1px 4px rgba(120,90,40,0.10);
 }
-
 .button-main.namegen {
-    margin-top: 0; /* oder z.B. 20px */
+  margin-top: 80px;
 }
 
 .dropdown {
-    position: relative;
+  position: relative;
 }
-
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f5e6c8;
-    width: 100%;
-    min-width: unset;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.08); /* weniger Schatten, kein Schwarz */
-    border: none; /* entfernt eventuelle Ränder */
-    z-index: 1001;
-    top: 100%;
-    left: 0;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 100%; /* NEU: gleiche Breite wie Dropbtn */
+  background-color: #e6d3b3;
+  box-shadow: 0px 8px 16px 0px rgba(120,90,40,0.08);
+  border: none;
+  z-index: 1001;
 }
-
 .dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-weight: normal;
-    border-radius: 0;
+  color: #4b2e05;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+  border-radius: 0;
+  background: #e6d3b3;
+  min-width: 100%; /* NEU: gleiche Breite wie Dropdown-Box */
+  box-sizing: border-box;
+  text-align: center;
 }
-
 .dropdown-content a:hover {
-    background-color: #eee;
-    color: #333;
+  background-color: #f9f6f1;
+  color: #3a2a13;
+}
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.random-result {
+  font-family: 'Caveat', cursive;
+  font-size: 2.2em;
+  color: #4b2e05;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: color 0.3s;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  min-height: 2.5em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.dropbtn {
-    display: block;
-    padding: 10px 24px;
-    font-weight: bold;
-    color: #fff;
-    background: none;
-    cursor: default;
-    user-select: none;
-    line-height: 1.5;      /* Ergänzt */
-    height: 100%;          /* Ergänzt */
-    text-decoration: none; /* Ergänzt */
-}
-.dropdown:hover > .dropbtn,
-.dropdown:focus-within > .dropbtn {
-    background: #f5e6c8;
-    color: #333;
-}
-
-#randomNameResult {
-    font-family: 'Caveat', cursive;
-    font-size: 2.2em;
-    color: #4b2e05;
-    letter-spacing: 1px;
-    text-align: center;
-    transition: color 0.3s;
-    white-space: nowrap;
-    margin-bottom: 10px;
-    min-height: 2.5em; /* etwas mehr Platz für große Namen */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Dice Log Sidebar */
+.dice-log-sidebar {
+  position: fixed;
+  top: 60px; /* Höhe der Navbar */
+  right: 0;
+  width: 320px;
+  height: calc(100vh - 60px);
+  background: #f3e7d3;
+  border-left: 2px solid #bfa97a;
+  box-shadow: -2px 0 8px rgba(120,90,40,0.08);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+  transform: translateX(0);
 }
 
-#randomLootResult {
-    font-family: 'Caveat', cursive;
-    font-size: 2.2em;
-    color: #4b2e05;
-    letter-spacing: 1px;
-    text-align: center;
-    transition: color 0.3s;
-    white-space: nowrap;
-    margin-bottom: 10px;
-    min-height: 2.5em; /* etwas mehr Platz für große Namen */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dice-log-sidebar.collapsed {
+  transform: translateX(100%);
+}
+
+.dice-log-header {
+  background: #bfa97a;
+  color: #4b2e05;
+  font-weight: bold;
+  padding: 14px 18px;
+  font-size: 1.2em;
+  border-bottom: 1px solid #a0895b;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dice-log-entries {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column-reverse; /* Neueste oben */
+  gap: 10px;
+}
+
+.dice-log-entry {
+  background: #fffbe6;
+  border-left: 4px solid #bfa97a;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #4b2e05;
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 1.1em;
+  box-shadow: 0 1px 4px rgba(120,90,40,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dice-log-timestamp {
+  font-size: 0.85em;
+  color: #a0895b;
+  margin-left: 10px;
 }
 

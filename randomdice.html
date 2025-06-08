@@ -9,45 +9,52 @@
 </head>
 <body>
 <div id="navbar-placeholder"></div>
-    <div class="content">
-        <h1>Random Dice</h1>
-        <p>Click on a die to roll it.</p>
+<div class="content dice">
+    <h1>Random Dice</h1>
+    <p>Click on a die to roll it.</p>
 
-<div class="parent">
-    <button class="dice-button" onclick="showRandomD4(this)">
-        <img src="bilder/dice-d4-outline.1024x860.png" alt="D4" style="width:60px; height:60px;">
-    </button>
-    <button class="dice-button" onclick="showRandomD6(this)">
-        <img src="bilder/dice-d6-outline.1024x1024.png" alt="D6" style="width:60px; height:60px;">
-    </button>
-    <button class="dice-button" onclick="showRandomD8(this)">
-        <img src="bilder/dice-d8-outline.1024x1024.png" alt="D8" style="width:60px; height:60px;">
-    </button>
-    <button class="dice-button" onclick="showRandomD10(this)">
-        <img src="bilder/dice-d10-outline.1024x1024.png" alt="D10" style="width:60px; height:60px;">
-    </button>
-    <button class="dice-button" onclick="showRandomD12(this)">
-        <img src="bilder/dice-d12-outline.1024x975.png" alt="D12" style="width:60px; height:60px;">
-    </button>
-    <button class="dice-button" onclick="showRandomD20(this)">
-        <img src="bilder/dice-d20-outline.922x1024.png" alt="D20" style="width:60px; height:60px;">
-    </button>
+    <div class="parent">
+        <button class="dice-button" onclick="showRandomD4(this)">
+            <img src="bilder/dice-d4-outline.1024x860.png" alt="D4" style="width:60px; height:60px;">
+        </button>
+        <button class="dice-button" onclick="showRandomD6(this)">
+            <img src="bilder/dice-d6-outline.1024x1024.png" alt="D6" style="width:60px; height:60px;">
+        </button>
+        <button class="dice-button" onclick="showRandomD8(this)">
+            <img src="bilder/dice-d8-outline.1024x1024.png" alt="D8" style="width:60px; height:60px;">
+        </button>
+        <button class="dice-button" onclick="showRandomD10(this)">
+            <img src="bilder/dice-d10-outline.1024x1024.png" alt="D10" style="width:60px; height:60px;">
+        </button>
+        <button class="dice-button" onclick="showRandomD12(this)">
+            <img src="bilder/dice-d12-outline.1024x975.png" alt="D12" style="width:60px; height:60px;">
+        </button>
+        <button class="dice-button" onclick="showRandomD20(this)">
+            <img src="bilder/dice-d20-outline.922x1024.png" alt="D20" style="width:60px; height:60px;">
+        </button>
+    </div>
+
+    <h2>Dice History:</h2>
+    <div class="dice-history" id="diceHistory"></div>
+
+    
+    <button class="button-main" onclick="clearHistory()">Clear History</button>
 </div>
 
-    <div class="content">
-        <h2>Dice History:</h2>
-    <div class="dice-history" id="diceHistory"></div>
-    </div>
+<!-- Dice Log Sidebar -->
+<div id="dice-log-sidebar" class="dice-log-sidebar collapsed">
+  <div class="dice-log-header" onclick="toggleDiceLog()">
+    🎲 Dice Log
+    <span id="dice-log-toggle" style="float:right;cursor:pointer;">&#9776;</span>
+  </div>
+  <div class="dice-log-entries" id="diceLogEntries"></div>
+</div>
 
-    <div class="content">
-        <button class="button-main" onclick="clearHistory()">Clear History</button>
-    </div>
-
-    <script src="script.js"></script>
-    <script>
-    fetch('navbar.html')
-    .then(response => response.text())
-    .then(html => document.getElementById('navbar-placeholder').innerHTML = html);
+<script src="script.js"></script>
+<script>
+fetch('navbar.html')
+.then(response => response.text())
+.then(html => document.getElementById('navbar-placeholder').innerHTML = html);
 </script>
 
 </body>

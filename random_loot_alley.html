@@ -13,7 +13,6 @@
 
     <script src="script.js"></script>
 
-    <!-- code für die Namensgenerierung and das Formular-->
     <script>
 function fetchRandomLoot() {
   fetch('/api/randomloot')
@@ -23,7 +22,7 @@ function fetchRandomLoot() {
     window.addEventListener('DOMContentLoaded', fetchRandomLoot);
     </script>
     <div class="content">
-        <div id="randomLootResult"></div>
+        <div id="randomLootResult" class="random-result"></div>
         <button class="button-main namegen" onclick="fetchRandomLoot()">Generate Random Loot</button>
     </div>
 <script>
