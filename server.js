@@ -66,4 +66,26 @@ app.get('/api/randomloot', (req, res) => {
   );
 });
 
+// Neue Datenbank für Random Forest Encounter
+const dbEncounter = new sqlite3.Database('db/random_forest_encounter.db');
+
+dbEncounter.serialize(() => {
+  dbEncounter.run("CREATE TABLE IF NOT EXISTS random_forest_encounter (name TEXT)");
+});
+
+// Neue Route für Forest Encounter
+app.get('/api/random_forest_encounter', (req, res) => {
+  dbEncounter.get("SELECT name FROM random_forest_encounter ORDER BY RANDOM() LIMIT 1", 
+    [],
+    (err, row) => {
+      if (err) {
+        res.status(500).json({ error: 'Fehler beim Auslesen der Encounter-Tabelle.' });
+      } else {
+        res.json({ item: row?.name || '' }); // <-- hier muss .name stehen!
+      }
+    }
+  );
+});
+
+
 app.listen(3000, () => console.log('Server läuft auf http://localhost:3000'));
