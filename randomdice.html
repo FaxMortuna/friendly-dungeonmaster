@@ -10,8 +10,7 @@
 <body>
 <div id="navbar-placeholder"></div>
 <div class="content dice">
-    <h1>Random Dice</h1>
-    <p>Click on a die to roll it.</p>
+    <h1>Click on a die to roll it.</h1>
 
     <div class="parent">
         <button class="dice-button" onclick="showRandomD4(this)">
@@ -34,18 +33,17 @@
         </button>
     </div>
 
-    <h2>Dice History:</h2>
-    <div class="dice-history" id="diceHistory"></div>
 
-    
-    <button class="button-main" onclick="clearHistory()">Clear History</button>
+    <h2>Last Result:</h2>
+    <div class="dice-last-result" id="diceLastResult"></div>
+
+    <button class="button-main" onclick="clearLog()">Clear Log</button>
 </div>
 
 <!-- Dice Log Sidebar -->
-<div id="dice-log-sidebar" class="dice-log-sidebar collapsed">
-  <div class="dice-log-header" onclick="toggleDiceLog()">
+<div id="dice-log-sidebar" class="dice-log-sidebar">
+  <div class="dice-log-header">
     🎲 Dice Log
-    <span id="dice-log-toggle" style="float:right;cursor:pointer;">&#9776;</span>
   </div>
   <div class="dice-log-entries" id="diceLogEntries"></div>
 </div>

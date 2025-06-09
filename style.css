@@ -118,41 +118,6 @@ body {
   box-shadow: none;
 }
 
-.dice-history {
-  display: grid;
-  grid-template-columns: repeat(5, 40px);
-  grid-template-rows: repeat(2, 40px);
-  gap: 32px;
-  justify-content: center;
-  align-items: center;
-  margin: 16px auto;
-  width: max-content;
-  background: transparent;
-  border-radius: 8px;
-  padding: 10px;
-  min-height: 96px;
-}
-.dice-history-cell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f3e7d3;
-  border: 1px solid #bfa97a;
-  border-radius: 6px;
-  font-size: 2em;
-  min-width: 60px;
-  min-height: 60px;
-  font-weight: bold;
-  color: #4b2e05;
-}
-@keyframes flash {
-  0%   { background: #fffbe6; }
-  100% { background: #e6d3b3; }
-}
-.dice-history-cell.flash {
-  animation: flash 0.5s;
-}
-
 .button-main {
   background: #bfa97a;
   color: #4b2e05;
@@ -236,32 +201,26 @@ body {
 /* Dice Log Sidebar */
 .dice-log-sidebar {
   position: fixed;
-  top: 60px; /* Höhe der Navbar */
+  top: 65px;
   right: 0;
-  width: 320px;
+  width: 350px;
   height: calc(100vh - 60px);
-  background: #f3e7d3;
+  background: #f9f6f1; /* heller Hintergrund wie body */
   border-left: 2px solid #bfa97a;
   box-shadow: -2px 0 8px rgba(120,90,40,0.08);
   z-index: 2000;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s;
-  transform: translateX(0);
 }
 
-.dice-log-sidebar.collapsed {
-  transform: translateX(100%);
-}
 
 .dice-log-header {
-  background: #bfa97a;
+  background: #e6d3b3; /* wie Navbar-Hover */
   color: #4b2e05;
   font-weight: bold;
   padding: 14px 18px;
   font-size: 1.2em;
-  border-bottom: 1px solid #a0895b;
-  cursor: pointer;
+  border-bottom: 1px solid #bfa97a;
   user-select: none;
 }
 
@@ -271,16 +230,16 @@ body {
   padding: 12px 16px;
   font-size: 1em;
   display: flex;
-  flex-direction: column-reverse; /* Neueste oben */
+  flex-direction: column;
   gap: 10px;
 }
 
 .dice-log-entry {
-  background: #fffbe6;
+  background: #fff; /* weiß für Kontrast */
   border-left: 4px solid #bfa97a;
   border-radius: 6px;
   padding: 8px 12px;
-  color: #4b2e05;
+  color: #2d1c0c; /* wie body-Text */
   font-family: 'Caveat', cursive, sans-serif;
   font-size: 1.1em;
   box-shadow: 0 1px 4px rgba(120,90,40,0.06);
@@ -291,7 +250,23 @@ body {
 
 .dice-log-timestamp {
   font-size: 0.85em;
-  color: #a0895b;
+  color: #bfa97a;
   margin-left: 10px;
+}
+
+.dice-last-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3e7d3;
+  border: 2px solid #bfa97a;
+  border-radius: 8px;
+  font-size: 2em;
+  min-width: 80px;
+  min-height: 80px;
+  font-weight: bold;
+  color: #4b2e05;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(120,90,40,0.10);
 }
 
