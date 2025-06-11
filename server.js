@@ -75,13 +75,14 @@ dbEncounter.serialize(() => {
 
 // Neue Route für Forest Encounter
 app.get('/api/random_forest_encounter', (req, res) => {
-  dbEncounter.get("SELECT name FROM random_forest_encounter ORDER BY RANDOM() LIMIT 1", 
+  dbEncounter.get(
+    `SELECT field1 as name FROM random_encounter_forest ORDER BY RANDOM() LIMIT 1`,
     [],
     (err, row) => {
       if (err) {
         res.status(500).json({ error: 'Fehler beim Auslesen der Encounter-Tabelle.' });
       } else {
-        res.json({ item: row?.name || '' }); // <-- hier muss .name stehen!
+        res.json({ item: row?.name || '' });
       }
     }
   );
