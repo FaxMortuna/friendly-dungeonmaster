@@ -75,7 +75,7 @@ body {
   margin-bottom: 20px;
 }
 .content p {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
 }
 
@@ -268,5 +268,14 @@ body {
   color: #4b2e05;
   margin-bottom: 20px;
   box-shadow: 0 1px 4px rgba(120,90,40,0.10);
+}
+
+.news-list {
+  margin-top: 0;
+  padding-left: 1.2em;
+  font-size: 1.1em;
+}
+.news-list li {
+  margin-bottom: 0.5em;
 }
 
