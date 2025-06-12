@@ -88,5 +88,22 @@ app.get('/api/random_forest_encounter', (req, res) => {
   );
 });
 
+// random adventure
+const dbAdventure = new sqlite3.Database('db/random_adventure.db');
+dbAdventure.serialize(() => {
+  dbAdventure.run("CREATE TABLE IF NOT EXISTS detail1 (name TEXT UNIQUE)");
+  dbAdventure.run("CREATE TABLE IF NOT EXISTS detail2 (name TEXT UNIQUE)");
+  dbAdventure.run("CREATE TABLE IF NOT EXISTS detail3 (name TEXT UNIQUE)");
+});
+
+app.get('/api/random_adventure', (req, res) => {
+  dbAdventure.get("SELECT name FROM detail1 ORDER BY RANDOM() LIMIT 1", [], (err, d1) => {
+    dbAdventure.get("SELECT name FROM detail2 ORDER BY RANDOM() LIMIT 1", [], (err, d2) => {
+      dbAdventure.get("SELECT name FROM detail3 ORDER BY RANDOM() LIMIT 1", [], (err, d3) => {
+        res.json({ name: `${d1?.name || ''} ${d2?.name || ''} ${d3?.name || ''}` });
+      });
+    });
+  });
+});
 
 app.listen(3000, () => console.log('Server läuft auf http://localhost:3000'));

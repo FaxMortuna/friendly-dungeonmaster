@@ -1,8 +1,10 @@
 const diceHistory = [];
 
 function updateDiceHistory(result) {
-    const lastResultDiv = document.getElementById('diceLastResult');
-    lastResultDiv.textContent = result ? result : '';
+  const el = document.getElementById('diceLastResult');
+  if (el) {
+    el.textContent = result;
+  }
 }
 
 // Clear Log und History
