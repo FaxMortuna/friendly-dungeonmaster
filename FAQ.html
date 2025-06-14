@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <style>
+      .content {
+        text-align: center;
+      }
+      .faq-item {
+        display: block;
+        width: 100%;
+        margin-bottom: 2em;
+      }
+      .faq-question {
+        font-size: 1.4em;
+        font-weight: bold;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        text-align: center;
+      }
+      .faq-answer {
+        font-size: 1.1em;
+        margin-bottom: 0;
+        line-height: 1.6;
+        margin-left: 0;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<div class="content">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+        <div class="faq-question">How does the name generator work?</div>
+        <div class="faq-answer">
+            The generators randomly combine selected names, flavors or other stuff I have gathered, to create a unique inspiration.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Where do you get your ideas from?</div>
+        <div class="faq-answer">
+            I mainly use my own ideas, but I also draw inspiration from various sources such as books, movies, and games.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Can I submit my own suggestions?</div>
+        <div class="faq-answer">
+            Yes! You can submit suggestions and feedback through the <a href="contact.html">contact form</a>. I appreciate every idea.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Will my data be stored?</div>
+        <div class="faq-answer">
+            No, no personal data is stored permanently. Suggestions from the contact form are only used for processing.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Is this for free?</div>
+        <div class="faq-answer">
+            Yes, this service is completely free to use. I started it to learn a bit about web development in the first place.<br>
+            If you like it, feel free to share it with others or support me by spreading the word!</div>
+    </div>
+
+    <!-- Additional FAQ entries can be added here -->
+</div>
+<script src="script.js"></script>
+<script>
+fetch('navbar.html')
+  .then(response => response.text())
+  .then(html => document.getElementById('navbar-placeholder').innerHTML = html);
+</script>
+</body>
+</html>

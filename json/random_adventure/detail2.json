@@ -1,80 +1,80 @@
 [
     {
-        "name": "Goblet"
+        "name": "goblet"
     },
     {
-        "name": "Prisoner"
+        "name": "prisoner"
     },
     {
-        "name": "Sword"
+        "name": "sword"
     },
     {
-        "name": "Vault"
+        "name": "vault"
     },
     {
-        "name": "Cult"
+        "name": "cult"
     },
     {
-        "name": "Spirit"
+        "name": "spirit"
     },
     {
-        "name": "Killer"
+        "name": "killer"
     },
     {
-        "name": "Demon"
+        "name": "demon"
     },
     {
-        "name": "Noble"
+        "name": "noble"
     },
     {
-        "name": "Hunter"
+        "name": "hunter"
     },
     {
-        "name": "Hostage"
+        "name": "hostage"
     },
     {
-        "name": "Thief"
+        "name": "thief"
     },
     {
-        "name": "Spy"
+        "name": "spy"
     },
     {
-        "name": "Werewolf"
+        "name": "werewolf"
     },
     {
-        "name": "Relic"
+        "name": "relic"
     },
     {
-        "name": "High priest"
+        "name": "high priest"
     },
     {
-        "name": "Merchant"
+        "name": "merchant"
     },
     {
-        "name": "Witch"
+        "name": "witch"
     },
     {
-        "name": "Ritual"
+        "name": "ritual"
     },
     {
-        "name": "Vampire"
+        "name": "vampire"
     },
     {
-        "name": "Ghoul"
+        "name": "ghoul"
     },
     {
-        "name": "King"
+        "name": "king"
     },
     {
-        "name": "Bracelet"
+        "name": "bracelet"
     },
     {
-        "name": "Destroyer"
+        "name": "destroyer"
     },
     {
-        "name": "Warlock"
+        "name": "warlock"
     },
     {
-        "name": "Tome"
+        "name": "tome"
     }
 ]
