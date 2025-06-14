@@ -15,11 +15,15 @@
 
     <script>
 function fetchRandomLoot() {
-  fetch('/api/randomloot')
+  fetch('json/random_loot_alley.json')
     .then(r => r.json())
-    .then(d => document.getElementById('randomLootResult').textContent = d.item);
+    .then(data => {
+      const random = data[Math.floor(Math.random() * data.length)];
+      document.getElementById('randomLootResult').textContent = random.loot_alley;
+    });
 }
-    window.addEventListener('DOMContentLoaded', fetchRandomLoot);
+
+window.addEventListener('DOMContentLoaded', fetchRandomLoot);
     </script>
     <div class="content">
         <div id="randomLootResult" class="random-result"></div>

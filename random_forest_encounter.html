@@ -10,32 +10,12 @@
 <body>
 <div id="navbar-placeholder"></div>
 <div class="content">
-    <div id="randomForestEncounterResult" class="random-result"></div>
-    <button class="button-main namegen" onclick="fetchRandomForestEncounter()">Random Forest Encounter</button>
+    <div id="randomEncounterForestResult" class="random-result"></div>
+    <button class="button-main namegen" onclick="fetchRandomEncounterForest()">Generate Random Forest Encounter</button>
 </div>
-<script src="script.js"></script>
-
-<!-- Code for fetching random forest encounter and displaying it -->
+<script src="random_encounter_forest.js"></script>
 <script>
-function fetchRandomForestEncounter() {
-  fetch('/api/random_forest_encounter')
-    .then(r => r.json())
-    .then(d => {
-      const text = d.item || '';
-      let html;
-      if (text.length > 90) {
-        // Trenne an Wortgrenze, nicht mitten im Wort
-        let idx = text.lastIndexOf(' ', 90);
-        if (idx === -1) idx = 90;
-        html = text.slice(0, idx) + '<br>' + text.slice(idx).trim();
-      } else {
-        html = text;
-      }
-      document.getElementById('randomForestEncounterResult').innerHTML = html;
-    });
-}
-window.addEventListener('DOMContentLoaded', fetchRandomForestEncounter);
-
+  
 fetch('navbar.html')
   .then(response => response.text())
   .then(html => document.getElementById('navbar-placeholder').innerHTML = html);

@@ -23,9 +23,10 @@
     window.addEventListener('DOMContentLoaded', fetchRandomName);
     </script>
     <div class="content">
-        <div id="randomNameResult" class="random-result"></div>
-        <button class="button-main namegen" onclick="fetchRandomName()">Generate Random Name (female)</button>
+        <div id="randomNameFemaleResult" class="random-result"></div>
+        <button class="button-main namegen" onclick="fetchRandomNameFemale()">Generate Female Name</button>
     </div>
+    <script src="randomname_female.js"></script>
     <script>
     fetch('navbar.html')
     .then(response => response.text())
