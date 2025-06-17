@@ -13,12 +13,17 @@
     <div id="randomEncounterForestResult" class="random-result"></div>
     <button class="button-main namegen" onclick="fetchRandomEncounterForest()">Generate Random Forest Encounter</button>
 </div>
+<div id="footer-placeholder"></div>
 <script src="random_encounter_forest.js"></script>
 <script>
   
 fetch('navbar.html')
   .then(response => response.text())
   .then(html => document.getElementById('navbar-placeholder').innerHTML = html);
+
+fetch('footer.html')
+  .then(response => response.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html);
 </script>
 </body>
 </html>

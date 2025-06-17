@@ -48,11 +48,16 @@
   <div class="dice-log-entries" id="diceLogEntries"></div>
 </div>
 
+<div id="footer-placeholder"></div>
 <script src="script.js"></script>
 <script>
 fetch('navbar.html')
 .then(response => response.text())
 .then(html => document.getElementById('navbar-placeholder').innerHTML = html);
+
+fetch('footer.html')
+  .then(response => response.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html);
 </script>
 
 </body>

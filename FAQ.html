@@ -68,16 +68,22 @@
         <div class="faq-question">Is this for free?</div>
         <div class="faq-answer">
             Yes, this service is completely free to use. I started it to learn a bit about web development in the first place.<br>
-            If you like it, feel free to share it with others or support me by spreading the word!</div>
+            If you like it, feel free to share it with others or support me by spreading the word!<br>
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#4b2e05', 'O5O81GMIHS');kofiwidget2.draw();</script> 
+          </div>
     </div>
 
     <!-- Additional FAQ entries can be added here -->
 </div>
+<div id="footer-placeholder"></div>
 <script src="script.js"></script>
 <script>
 fetch('navbar.html')
   .then(response => response.text())
   .then(html => document.getElementById('navbar-placeholder').innerHTML = html);
+fetch('footer.html')
+  .then(response => response.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html);
 </script>
 </body>
 </html>

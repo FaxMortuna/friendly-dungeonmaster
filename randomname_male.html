@@ -13,11 +13,15 @@
     <div id="randomNameMaleResult" class="random-result"></div>
     <button class="button-main namegen" onclick="fetchRandomNameMale()">Generate Random Name (male)</button>
 </div>
+<div id="footer-placeholder"></div>
 <script src="randomname_male.js"></script>
 <script>
 fetch('navbar.html')
   .then(response => response.text())
   .then(html => document.getElementById('navbar-placeholder').innerHTML = html);
+fetch('footer.html')
+  .then(response => response.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html);
 </script>
 </body>
 </html>
