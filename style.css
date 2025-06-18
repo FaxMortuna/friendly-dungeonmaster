@@ -50,6 +50,15 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 
+/* Standard: Hamburger-Icon ausblenden, Links anzeigen */
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-links {
+  display: flex;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -59,6 +68,9 @@ body {
   padding-top: 80px;
   padding-bottom: 20px;
   width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2em;
 }
 .content.dice {
   min-height: unset;
@@ -79,6 +91,83 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
+}
+
+/* Responsives Layout für Mobilgeräte */
+@media (max-width: 600px) {
+  .content {
+    padding: 1em;
+    max-width: 100%;
+  }
+  .random-result {
+    font-size: 1.1em;
+    word-break: break-word;
+  }
+  .faq-question, .faq-answer, .news-list, .content p {
+    font-size: 1em;
+  }
+  .button-main {
+    width: 100%;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5em;
+    background: #4b2e05;
+    padding: 0;
+  }
+  .navbar-links.show {
+    display: flex;
+  }
+  .navbar-links li {
+    margin: 0.5em 0;
+    text-align: center;
+  }
+}
+
+/* Desktop: Dropdown beim Hover */
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #333;
+  min-width: 160px;
+  z-index: 1;
+  left: 0;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile: Dropdown beim Klick */
+@media (max-width: 700px) {
+  .dropdown-content {
+    position: static;
+    background: #4b2e05;
+    min-width: 100%;
+  }
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover .dropdown-content {
+    display: none; /* Hover auf Mobile verhindern */
+  }
 }
 
 .parent {
@@ -185,19 +274,12 @@ body {
 }
 
 .random-result {
-  font-family: 'Caveat', cursive;
-  font-size: 2.2em;
-  color: #4b2e05;
-  letter-spacing: 1px;
+  word-break: break-word;
+  font-size: 1.3em;
+  padding: 0.5em;
+  margin: 1em 0;
   text-align: center;
-  transition: color 0.3s;
-  white-space: nowrap;
-  margin-bottom: 10px;
-  min-height: 2.5em;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 100%;
 }
 
 /* Dice Log Sidebar */
