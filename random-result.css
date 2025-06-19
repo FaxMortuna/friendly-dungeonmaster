@@ -1,0 +1,14 @@
+.random-result {
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: color 0.3s;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

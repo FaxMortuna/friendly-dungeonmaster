@@ -9,7 +9,7 @@ async function fetchRandomNameMale() {
   const l = last[Math.floor(Math.random() * last.length)]?.name || '';
   const fl = flavor[Math.floor(Math.random() * flavor.length)]?.name || '';
 
-  document.getElementById('randomNameMaleResult').textContent = `${f} ${l} ${fl}`;
+  document.getElementById('randomNameMaleResult').innerHTML = `${f} ${l}<br> ${fl}`;
 }
 
 window.addEventListener('DOMContentLoaded', fetchRandomNameMale);

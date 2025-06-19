@@ -4,35 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Female Names</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="random-result.css">
 </head>
 <body>
-<div id="navbar-placeholder"></div>
-
-    <script src="script.js"></script>
-
-    <!-- code für die Namensgenerierung and das Formular-->
-    <script>
-    function fetchRandomName() {
-      fetch('/api/randomname_female')
-        .then(r => r.json())
-        .then(d => document.getElementById('randomNameResult').textContent = d.name);
-    }
-    window.addEventListener('DOMContentLoaded', fetchRandomName);
-    </script>
+    <div class="centered-box">
+        <h1>Random Female Names</h1>
+        <div class="main-links">
+            <p>Generate random female names or go back to the <a href="home.html">beginning</a>.</p>
+        </div>
     <div class="content">
-        <div id="randomNameFemaleResult" class="random-result"></div>
-        <button class="button-main namegen" onclick="fetchRandomNameFemale()">Generate Female Name</button>
+        <div id="randomNameFemaleResult" class="random-result"></div><br><br>
     </div>
-    <script src="randomname_female.js"></script>
-    <script>
-    fetch('navbar.html')
-    .then(response => response.text())
-    .then(html => document.getElementById('navbar-placeholder').innerHTML = html);
-</script>
+    <div class ="content">
+        <button class="button-main namegen" onclick="fetchRandomNameFemale()">Click for inspiration</button>
+    </div>
+    </div>
 <div id="footer-placeholder"></div>
+<script src="randomname_female.js"></script>
 <script>
 fetch('footer.html')
   .then(response => response.text())

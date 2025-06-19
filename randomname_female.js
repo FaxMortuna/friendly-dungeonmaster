@@ -11,7 +11,7 @@ async function fetchRandomNameFemale() {
   const l = last[Math.floor(Math.random() * last.length)]?.name || '';
   const fl = flavor[Math.floor(Math.random() * flavor.length)]?.name || '';
 
-  document.getElementById('randomNameFemaleResult').textContent = `${f} ${l} ${fl}`;
+  document.getElementById('randomNameFemaleResult').innerHTML = `${f} ${l}<br>${fl}`;
 }
 
 window.addEventListener('DOMContentLoaded', fetchRandomNameFemale);

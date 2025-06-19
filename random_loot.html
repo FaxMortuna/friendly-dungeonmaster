@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Forest Encounter</title>
+    <title>Random Loot</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="random-result.css">
 </head>
 <body>
-<div class="centered-box">
-    <h1>Random Forest Encounter</h1>
-    <div class="main-links">
-        <p>Generate a random forest encounter or go back to the <a href="home.html">beginning</a>.</p>
-    </div>
+    <div class="centered-box">
+        <h1>Random Loot</h1>
+        <div class="main-links">
+            <p>Generate random loot or go back to the <a href="home.html">beginning</a>.</p>
+        </div>
     <div class="content">
-        <div id="randomEncounterForestResult" class="random-result"></div><br><br>
+        <div id="randomLootResult" class="random-result"></div><br>
     </div>
-        <button class="button-main namegen" onclick="fetchRandomEncounterForest()">Click for inspiration</button>
+    <div class ="content">
+        <button class="button-main namegen" onclick="fetchRandomLoot()">Click for inspiration</button>
     </div>
-</div>
+    </div>
 <div id="footer-placeholder"></div>
-<script src="random_encounter_forest.js"></script>
+<script src="random_loot.js"></script>
 <script>
 fetch('footer.html')
   .then(response => response.text())

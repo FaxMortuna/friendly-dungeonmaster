@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Male Names</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="random-result.css">
 </head>
 <body>
-<div id="navbar-placeholder"></div>
-<div class="content">
-    <div id="randomNameMaleResult" class="random-result"></div>
-    <button class="button-main namegen" onclick="fetchRandomNameMale()">Generate Random Name (male)</button>
+    <div class="centered-box">
+        <h1>Random Male Names</h1>
+        <div class="main-links">
+            <p>Generate random male names or go back to the <a href="home.html">beginning</a>.</p>
+        </div>
+    <div class="content">
+        <div id="randomNameMaleResult" class="random-result"></div><br><br>
+    </div>
+    <div class ="content">
+        <button class="button-main namegen" onclick="fetchRandomNameMale()">Click for inspiration</button>
+    </div>
 </div>
+
 <div id="footer-placeholder"></div>
 <script src="randomname_male.js"></script>
 <script>
-fetch('navbar.html')
-  .then(response => response.text())
-  .then(html => document.getElementById('navbar-placeholder').innerHTML = html);
 fetch('footer.html')
   .then(response => response.text())
   .then(html => document.getElementById('footer-placeholder').innerHTML = html);
