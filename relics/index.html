@@ -27,11 +27,7 @@
     </div>
     <div id="footer-placeholder"></div>
     <script src="script.js"></script>
-    <script>
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(html => document.getElementById('navbar-placeholder').innerHTML = html);
-    </script>
+    <script src="navbar-loader.js"></script>
     <script>
       // Zeige nur die 10 neuesten News-Einträge an
       document.addEventListener('DOMContentLoaded', function() {
