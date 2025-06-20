@@ -3,6 +3,9 @@
         "field1": "A wounded beast lies in a clearing. It can barely move. Its tired eyes watch you as you approach."
     },
     {
+        "field1": "A painter stands with an easel in a clearing. He is painting a tree on which a knight has been hanged."
+    },
+    {
         "field1": "Drag marks on the forest floor lead you to a small opening in the ground."
     },
     {
@@ -67,8 +70,26 @@
     },
     {
         "field1": "Three hooded goats claim to be protecting an ancient artifact – it is a soup pot."
-    }
+    },
     {
         "field1": "A small redcap sits on a rock, whispering to a crow. As you come closer, it glances at you and quickly hides behind the rock."
+    },
+    {
+        "field1": "Thick spider webs block the way into a cave. Something large has been entangled inside."
+    },
+    {
+        "field1": "A wounded traveler is strangeled by a vine."
+    },
+    {
+        "field1": "An overgrown church stands abandoned on a small hill. Suddenly, the church bells ring out."
+    },
+    {
+        "field1": "A smug leprechaun taunts the PCs from a high branch."
+    },
+    {
+        "field1": "Suddenly, the forest falls silent. You suddenly feel like you're being watched from all sides."
+    },
+    {
+        "field1": "You hear the bushes rustling around you. Something is coming toward you."
     }
 ]
