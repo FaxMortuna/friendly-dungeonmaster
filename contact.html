@@ -10,7 +10,7 @@
 <body>
     <div class="centered-box">
         <h1>Contact & Suggestions</h1>
-        <p>Feel free to reach out with any questions or suggestions or return to the <a href="index.html">beginning</a>!</p>
+        <p>Feel free to reach out with any questions, suggestions or return to the <a href="index.html">beginning</a>!</p>
         <form action="https://formspree.io/f/xkgbbnvz" method="POST">
             <label for="name">Name:</label><br>
             <input type="text" name="name" required><br><br>
@@ -29,14 +29,12 @@
             </select><br><br>
 
             <label for="message">Message:</label><br>
-            <textarea name="message" rows="3"></textarea><br><br>
-
-            <label for="suggestion">Your Suggestion:</label><br>
-            <textarea name="suggestion" rows="2" required></textarea><br><br>
+            <textarea name="message" rows="3" required></textarea><br><br>
 
             <button class="button-main" type="submit">Send</button>
         </form>
-        <div id="contactSuccess" style="display:none; color:green; margin-top:1em;">Thank you for your suggestion!</div>
+        <p>Join the community on <a href="https://www.reddit.com/r/friendlydungeonmaster/">reddit</a>.</p>
+        <div id="contactSuccess" style="display:none; color:green; margin-top:1em;">Thank you for your message!</div>
     </div>
 
 
@@ -52,7 +50,6 @@
           email: this.email.value,
           generator: this.generator.value,
           message: this.message.value,
-          suggestion: this.suggestion.value
         })
       }).then(r => {
         if (r.ok) {
