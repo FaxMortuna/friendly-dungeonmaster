@@ -1,16 +1,16 @@
+
 let lastFirstIndex = -1;
 let lastLastIndex = -1;
 let lastFlavorIndex = -1;
 
-async function fetchRandomNameMale() {
+async function fetchRandomNameTavern() {
   const [first, last, flavor] = await Promise.all([
-    fetch('json/randomname_male/firstNames.json').then(r => r.json()),
-    fetch('json/randomname_male/lastNames.json').then(r => r.json()),
-    fetch('json/randomname_male/flavors.json').then(r => r.json())
+    fetch('json/randomname_tavern/randomname_tavern_first.json').then(r => r.json()),
+    fetch('json/randomname_tavern/randomname_tavern_second.json').then(r => r.json()),
+    fetch('json/randomname_tavern/randomname_tavern_flavor.json').then(r => r.json())
   ]);
 
-
-    //Kein doppelter Index hintereinander
+  //Kein doppelter Index hintereinander
     let firstIndex;
   if (first.lenght === 1) {
     firstIndex = 0;
@@ -44,7 +44,7 @@ async function fetchRandomNameMale() {
   lastFlavorIndex = flavorIndex;
   const fl = flavor[flavorIndex]?.name || '';
 
-  document.getElementById('randomNameMaleResult').innerHTML = `${f} ${l}<br> ${fl}`;
+  document.getElementById('randomNameTavernResult').innerHTML = `The ${f} ${l}<br> ${fl}`;
 }
 
-window.addEventListener('DOMContentLoaded', fetchRandomNameMale);
+window.addEventListener('DOMContentLoaded', fetchRandomNameTavern);
