@@ -3,6 +3,12 @@
         "name": "A fat boar lies by the fire. It belongs to the innkeeper."
     },
     {
+        "name": "It's best to dress up before entering. The guests are very particular about appearances."
+    },
+    {
+        "name": "Customers call it the \"Greasy Brat\""
+    },
+    {
         "name": "A faint smell of feces hangs in the air. It doesn't seem to bother the guests."
     },
     {
@@ -67,5 +73,11 @@
     },
     {
         "name": "A coven of witches often visits at midnight."
+    },
+    {
+        "name": "The tavern is filled with the soothing sound of the sea."
+    },
+    {
+        "name": "A talking skull is placed at a table. It speaks to guests who come alone."
     }
 ]

@@ -1,185 +1,108 @@
 [
-    {
-        "name": "Brighthelm"
-    },
-    {
-        "name": "Skye"
-    },
-    {
-        "name": "Darkmoor"
-    },
-    {
-        "name": "Emberstone"
-    },
-    {
-        "name": "Frostwhisper"
-    },
-    {
-        "name": "Shadowbrook"
-    },
-    {
-        "name": "Ironwood"
-    },
-    {
-        "name": "Stormrider"
-    },
-    {
-        "name": "Ravenshade"
-    },
-    {
-        "name": "Thornfield"
-    },
-    {
-        "name": "Nightbloom"
-    },
-    {
-        "name": "Windgrace"
-    },
-    {
-        "name": "Blackbarrow"
-    },
-    {
-        "name": "Silverfang"
-    },
-    {
-        "name": "Ashborne"
-    },
-    {
-        "name": "Hollowglen"
-    },
-    {
-        "name": "Grimvale"
-    },
-    {
-        "name": "Starfall"
-    },
-    {
-        "name": "Dreadmere"
-    },
-    {
-        "name": "Goldmantle"
-    },
-    {
-        "name": "Wolfscar"
-    },
-    {
-        "name": "La Salva"
-    },
-    {
-        "name": "Windseeker"
-    },
-    {
-        "name": "Tambrien"
-    },
-    {
-        "name": "Quickshoe"
-    },
-    {
-        "name": "Grashnak"
-    },
-    {
-        "name": "Elenrion"
-    },
-    {
-        "name": "Durgmol"
-    },
-    {
-        "name": "Norgel"
-    },
-    {
-        "name": "Faelarion"
-    },
-    {
-        "name": "Krugthar"
-    },
-    {
-        "name": "Thalorwen"
-    },
-    {
-        "name": "Mokgar"
-    },
-    {
-        "name": "Syltharis"
-    },
-    {
-        "name": "Vorgash"
-    },
-    {
-        "name": "Bearskin"
-    },
-    {
-        "name": "Beerkiss"
-    },
-    {
-        "name": "Nymelith"
-    },
-    {
-        "name": "Gorrun"
-    },
-    {
-        "name": "Arannis"
-    },
-    {
-        "name": "Astratart"
-    },
-    {
-        "name": "Zurgath"
-    },
-    {
-        "name": "Velmira"
-    },
-    {
-        "name": "Throgar"
-    },
-    {
-        "name": "Lysrien"
-    },
-    {
-        "name": "van Brolgar"
-    },
-    {
-        "name": "Urgoth"
-    },
-    {
-        "name": "Skinx"
-    },
-    {
-        "name": "Shadesmyr"
-    },
-    {
-        "name": "Brakkhul"
-    },
-    {
-        "name": "Vaelyndria"
-    },
-    {
-        "name": "Katas"
-    },
-    {
-        "name": "Miravel"
-    },
-    {
-        "name": "Littlebloom"
-    },
-    {
-        "name": "Konkonoko"
-    },
-    {
-        "name": "Walerian"
-    },
-    {
-        "name": "Ylleria"
-    },
-    {
-        "name": "Aerithien"
-    },
-    {
-        "name": "Hilthera"
-    },
-    {
-        "name": "Bloog"
-    },
-    {
-        "name": "Gallon"
-    }
+    { "name": "Stuck" },
+    { "name": "Skye" },
+    { "name": "Krennis" },
+    { "name": "Levenbrech" },
+    { "name": "Tolliver" },
+    { "name": "Rolsum" },
+    { "name": "Nolok" },
+    { "name": "van Kröt" },
+    { "name": "Kallasso" },
+    { "name": "Barscht" },
+    { "name": "Wurzelfresser" },
+    { "name": "Eisenwerfer" },
+    { "name": "Wollof" },
+    { "name": "Käsofski" },
+    { "name": "Harlof" },
+    { "name": "Krumm" },
+    { "name": "Idylle" },
+    { "name": "Narn" },
+    { "name": "Mashid" },
+    { "name": "Watabu" },
+    { "name": "Magkrana" },
+    { "name": "Sylkas" },
+    { "name": "Parel" },
+    { "name": "Steinsäule" },
+    { "name": "Magmazeh" },
+    { "name": "Brighthelm" },
+    { "name": "Darkmoor" },
+    { "name": "Emberstone" },
+    { "name": "Frostwhisper" },
+    { "name": "Shadowbrook" },
+    { "name": "Ironwood" },
+    { "name": "Stormrider" },
+    { "name": "Ravenshade" },
+    { "name": "Thornfield" },
+    { "name": "Nightbloom" },
+    { "name": "Windgrace" },
+    { "name": "Blackbarrow" },
+    { "name": "Silverfang" },
+    { "name": "Ashborne" },
+    { "name": "Hollowglen" },
+    { "name": "Grimvale" },
+    { "name": "Starfall" },
+    { "name": "Dreadmere" },
+    { "name": "Goldmantle" },
+    { "name": "Wolfscar" },
+    { "name": "Sylrionel" },
+    { "name": "Gorrak'thul" },
+    { "name": "Bronzeblade" },
+    { "name": "Varethyn" },
+    { "name": "Drakzhar" },
+    { "name": "Stonebraid" },
+    { "name": "Yllathor" },
+    { "name": "Krugh'mok" },
+    { "name": "Duskwither" },
+    { "name": "Thalrien" },
+    { "name": "Molgrum" },
+    { "name": "Zephyros" },
+    { "name": "Raventhorn" },
+    { "name": "Nazhug" },
+    { "name": "Elandriel" },
+    { "name": "Thrumgar" },
+    { "name": "Vaelix" },
+    { "name": "Or'Kazun" },
+    { "name": "Caelthorn" },
+    { "name": "Skarnfell" },
+    { "name": "La Salva" },
+    { "name": "Windseeker" },
+    { "name": "Tambrien" },
+    { "name": "Quickshoe" },
+    { "name": "Grashnak" },
+    { "name": "Elenrion" },
+    { "name": "Durgmol" },
+    { "name": "Norgel" },
+    { "name": "Faelarion" },
+    { "name": "Krugthar" },
+    { "name": "Thalorwen" },
+    { "name": "Mokgar" },
+    { "name": "Syltharis" },
+    { "name": "Vorgash" },
+    { "name": "Bearskin" },
+    { "name": "Beerkiss" },
+    { "name": "Nymelith" },
+    { "name": "Gorrun" },
+    { "name": "Arannis" },
+    { "name": "Astratart" },
+    { "name": "Zurgath" },
+    { "name": "Velmira" },
+    { "name": "Throgar" },
+    { "name": "Lysrien" },
+    { "name": "van Brolgar" },
+    { "name": "Urgoth" },
+    { "name": "Skinx" },
+    { "name": "Shadesmyr" },
+    { "name": "Brakkhul" },
+    { "name": "Vaelyndria" },
+    { "name": "Katas" },
+    { "name": "Miravel" },
+    { "name": "Littlebloom" },
+    { "name": "Konkonoko" },
+    { "name": "Walerian" },
+    { "name": "Ylleria" },
+    { "name": "Aerithien" },
+    { "name": "Hilthera" },
+    { "name": "Bloog" },
+    { "name": "Heert" },
+    { "name": "Gallon" }
 ]
