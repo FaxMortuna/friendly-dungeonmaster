@@ -6,8 +6,8 @@ async function fetchRandomNameFemale() {
   // Lade alle drei Listen parallel
   const [first, last, flavor] = await Promise.all([
     fetch('json/randomname_female/firstNames.json').then(r => r.json()),
-    fetch('json/randomname_female/lastNames.json').then(r => r.json()),
-    fetch('json/randomname_female/flavors.json').then(r => r.json())
+    fetch('json/randomname/lastNames.json').then(r => r.json()),
+    fetch('json/randomname/flavors.json').then(r => r.json())
   ]);
 
   //Kein doppelter Index hintereinander

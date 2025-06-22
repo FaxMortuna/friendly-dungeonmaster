@@ -5,8 +5,8 @@ let lastFlavorIndex = -1;
 async function fetchRandomNameMale() {
   const [first, last, flavor] = await Promise.all([
     fetch('json/randomname_male/firstNames.json').then(r => r.json()),
-    fetch('json/randomname_male/lastNames.json').then(r => r.json()),
-    fetch('json/randomname_male/flavors.json').then(r => r.json())
+    fetch('json/randomname/lastNames.json').then(r => r.json()),
+    fetch('json/randomname/flavors.json').then(r => r.json())
   ]);
 
 
