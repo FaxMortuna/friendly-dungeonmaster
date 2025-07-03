@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Creator</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="random-result.css">
+</head>
+<body>
+    <div class="centered-box">
+        <h1>Character Creator</h1>
+        <div class="main-links">
+            <p>Generate random characters or go back to the <a href="index.html">beginning</a>.</p>
+        </div>
+        <div class="content">
+            <p>Enter a name</p>
+        </div>
+        <div class="content">
+            <input type="text" id="characterName1" placeholder="First Name">
+            <input type="text" id="characterName2" placeholder="Last Name">
+        </div>
+        <div class="content">
+            <p>and</p>
+        </div>
+    <div class ="content">
+        <button class="button-main namegen" onclick="fetchRandomCharacter()">Click for inspiration</button><br><br>
+    </div>
+    <div id="randomCharacterResult" class="random-result"></div><br>
+    </div>
+<div id="footer-placeholder"></div>
+<script src="character_creator.js"></script>
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+</script>
+</body>
+</html>

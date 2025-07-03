@@ -5,11 +5,22 @@ body {
       color: #fff;
     }
     a {
-      color: #fff;
-    }
-    a:visited {
-      color: #ffffff;
-    }
+  display: inline-block;
+  background: #111;
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: background 0.2s, color 0.2s, border 0.2s, transform 0.1s;
+  cursor: pointer;
+}
+
+
+a:active {
+  background: #111;
+  color: #fff;
+}
+
     .centered-box {
       background: #111;
       border-radius: 18px;
@@ -64,40 +75,45 @@ body {
       border-color: #fff;
       transform: translateY(-2px) scale(1.03);
     }
-    .button-main.namegen {
-      width: 220px;         /* feste Breite */
-      height: 80px;         /* feste Höhe */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 1.1em;
-      padding: 0.5em;
-      overflow-wrap: break-word;
-      word-break: break-word;
-      background: #111;
-      color: #fff;
-      border: 2px solid #fff;
-      font-size: 1.2em;
-      font-weight: bold;
-      border-radius: 12px;
-      text-decoration: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-      transition: background 0.2s, color 0.2s, transform 0.1s, border 0.2s;
-    }
-    .button-main.namegen:hover {
-      background: #fff;
-      color: #111;
-      border-color: #fff;
-      transform: translateY(-2px) scale(1.03);
-    }
+    .button-main,
+.button-main.namegen {
+  width: 220px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5em;
+  background: #111;
+  color: #fff;
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: background 0.2s, color 0.2s, transform 0.1s, border 0.2s;
+  cursor: pointer;
+}
 
-  .button-main.namegen:active {
+.button-main:hover,
+.button-main.namegen:hover,
+.button-main:focus,
+.button-main.namegen:focus {
+  background: #ffd700;
+  color: #111;
+  border-color: #ffd700;
+  outline: none;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.button-main:active,
+.button-main.namegen:active {
   background: #111;
   color: #fff;
   border-color: #fff;
   transform: scale(0.98);
-  }
+}
 
     .button-main.namegen {
       cursor: pointer;
@@ -133,3 +149,102 @@ body {
       font-size: 0.95em;
       margin-top: 2em;
     }
+    .random-result, #randomCharacterResult {
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.character-name {
+  font-size: 1.3em;
+  margin-bottom: 0.7em;
+  color: #ffffff;
+  text-align: left;
+}
+
+.character-attribute {
+  background: #181818;
+  border-left: 4px solid #fcfcfc;
+  margin-bottom: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-size: 1.08em;
+  text-align: left;
+}
+
+.character-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.4em;
+  margin-top: 0.5em;
+}
+.character-table td {
+  background: #181818;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  vertical-align: top;
+  color: #fff;
+  font-size: 1.08em;
+}
+.character-table td:first-child {
+  font-weight: bold;
+  color: #ffffff;
+  width: 130px;
+  border-right: 2px solid #222;
+}
+
+#characterName1,
+#characterName2 {
+  background: #181818;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 0.7em 1em;
+  margin: 0.5em 0.5em 1em 0;
+  font-size: 1.1em;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  outline: none;
+  transition: border 0.2s, background 0.2s;
+}
+
+#characterName1:focus,
+#characterName2:focus {
+  border-color: #ffd700;
+  background: #222;
+}
+
+.button-main.namegen:focus,
+.button-main.namegen:hover {
+  border-color: #ffd700;
+}
+
+/* Kontaktformular Felder und Dropdown an Website-Look anpassen */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  background: #181818;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 0.7em 1em;
+  margin: 0.5em 0 1em 0;
+  font-size: 1.1em;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  outline: none;
+  transition: border 0.2s, background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #ffd700;
+  background: #222;
+}
