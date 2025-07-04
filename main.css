@@ -163,6 +163,10 @@ a:active {
   text-align: left;
 }
 
+.highlight-name {
+  color: #ffd700;
+}
+
 .character-attribute {
   background: #181818;
   border-left: 4px solid #fcfcfc;
@@ -192,6 +196,10 @@ a:active {
   color: #ffffff;
   width: 130px;
   border-right: 2px solid #222;
+}
+
+.character-table td:nth-child(2) {
+  color: #ffd700;
 }
 
 #characterName1,

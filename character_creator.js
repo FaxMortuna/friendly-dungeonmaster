@@ -30,7 +30,7 @@ async function fetchRandomCharacter() {
     const fearText = getRandom(fear);
 
     resultDiv.innerHTML = `
-    <div class="character-name"><strong>My name is ${name1} ${name2}</strong></div>
+    <div class="character-name"><strong>My name is <span class="highlight-name">${name1} ${name2}</span></strong></div>
     <table class="character-table">
       <tr><td><b>Personality 1:</b></td><td>${personalityText1}</td></tr>
       <tr><td><b>Personality 2:</b></td><td>${personalityText2}</td></tr>
